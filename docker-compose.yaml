@@ -6,6 +6,7 @@ services:
     labels:
       shipyard.route: '/'
       shipyard.init: 'poetry run flask db upgrade'
+      shipyard.primary-route: true
     build: '.'
     environment:
       DATABASE_URL: 'postgres://obscure-user:obscure-password@postgres/app'
